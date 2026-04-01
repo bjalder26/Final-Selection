@@ -2,52 +2,73 @@ body {
   background-color: #0b0f14;
   color: #e6edf3;
   font-family: 'Segoe UI', sans-serif;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+
+  min-height: 100vh; /* better than height for mobile */
   margin: 0;
   text-align: center;
   padding: 20px;
+
+  font-size: 18px; /* 👈 key fix for tiny text */
 }
 
+/* Container */
 .container {
-  max-width: 400px;
+  max-width: 420px;
   width: 100%;
 }
 
+/* Titles */
 h1 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin-bottom: 20px;
   font-weight: 500;
 }
 
+/* General text */
 p {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.15rem;  /* 👈 bigger + easier to read */
+  line-height: 1.6;
 }
 
+/* Optional: use for riddles or important text */
+.riddle {
+  font-size: 1.25rem;
+  line-height: 1.7;
+}
+
+/* Input */
 input {
   margin-top: 20px;
-  padding: 12px;
+  padding: 14px;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
   border: none;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 
+/* Button */
 button {
   margin-top: 15px;
-  padding: 12px;
+  padding: 14px;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 10px;
   border: none;
   background: #1f6feb;
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
+/* Subtle press feedback */
+button:active {
+  transform: scale(0.98);
+}
+
+/* Fade utility */
 .fade {
   opacity: 0;
   transition: opacity 1s ease;
@@ -57,6 +78,7 @@ button {
   opacity: 1;
 }
 
+/* Overlay (wrong answer) */
 .overlay {
   position: fixed;
   top: 0;
@@ -65,11 +87,14 @@ button {
   height: 100%;
   background: rgba(0,0,0,0.88);
   color: #e6edf3;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
   font-size: 1.6rem;
   letter-spacing: 1px;
+
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.4s ease;
