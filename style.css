@@ -122,3 +122,10 @@ button:active {
   width: 100%;
   max-width: 300px;      /* 👈 THIS fixes the visual centering */
 }
+
+.digit-input {
+    width: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 5px;
+  }
