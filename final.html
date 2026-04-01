@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script>
+function checkAnswer() {
+  let val = document.getElementById("answer").value.toLowerCase().trim();
+  if (val === "nakime") {
+    document.getElementById("judgment").classList.add("show");
+
+    setTimeout(() => {
+      document.getElementById("final").classList.add("show");
+    }, 2000);
+  }
+}
+</script>
+</head>
+<body>
+<div class="container">
+<p>
+I twist the rooms, I shift the space,<br>
+Infinity bends within my place.<br>
+A strum of strings controls it all—<br>
+Who am I within this hall?
+</p>
+
+<input id="answer">
+<button onclick="checkAnswer()">Submit</button>
+
+<p id="judgment" class="fade">Judgment Complete.</p>
+
+<div id="final" class="fade">
+<p>
+The space bends.<br><br>
+
+You found the one who controls it.<br><br>
+
+Few make it this far.<br><br>
+
+You did.<br><br>
+
+Welcome to the Demon Slayer Corps.
+</p>
+</div>
+</div>
+</body>
+</html>
