@@ -6,8 +6,8 @@
 <script>
 function checkAnswer() {
   let val = document.getElementById("answer").value.toLowerCase().trim();
-  if (val === "shinobu kocho" || val ==="shinobu") {
-    window.location.href = "page9.html";
+  if (val === "giyu" || val === "giyu tomioka" || val === "tomioka") {
+    window.location.href = "tsuchinoe.html";
   } else {
     wrongAnswer();
   }
@@ -17,14 +17,14 @@ function checkAnswer() {
 <body>
 <div class="container">
 <p>
-A gentle smile, a deadly sting,<br>
-Insects answer when I swing.<br>
-I lack the strength to cut clean through—<br>
-So poison is what I use on you.
+I wear two patterns, split down the seam,<br>
+My past was harsh, like a waking dream.<br>
+A calm exterior, but rage I keep—<br>
+Who am I when demons creep?
 </p>
 <div class="input-group">
 <input id="answer">
-<button onclick="checkAnswer()">Enter</button>
+<button onclick="checkAnswer()">Submit</button>
 </div>
 </div>
   <div id="overlay" class="overlay">

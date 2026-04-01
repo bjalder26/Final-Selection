@@ -10,7 +10,7 @@ function checkAnswer() {
   let val3 = document.getElementById("num3").value.toLowerCase().trim();
   let val = val1.concat(val2).concat(val3);
   if (val === "585") {
-    window.location.href = "page5.html";
+    window.location.href = "tsuchinoto.html";
   } else {
       wrongAnswer();
     }
@@ -19,6 +19,19 @@ function restrict(el) {
     // Replace any character that is NOT 0-9 with an empty string
     el.value = el.value.replace(/[^0-9]/g, '');
 }
+
+// Allow pressing Enter to submit
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("answer");
+
+    input.addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        checkAnswer();
+      }
+    });
+
+    input.focus(); // 👈 improves mobile experience
+  });
   
 </script>
 </head>

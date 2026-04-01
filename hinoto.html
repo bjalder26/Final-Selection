@@ -9,11 +9,24 @@ function checkAnswer() {
   let val2 = document.getElementById("answer2").value.toLowerCase().trim();
   let val3 = document.getElementById("answer3").value.toLowerCase().trim();
   if ((val1 === "muzan" || val1 === "muzan kibutsuji" || val1 === "kibutsuji") && val2 === "wisteria" && val3 === "blood") {
-    window.location.href = "page8.html";
+    window.location.href = "hinoe.html";
   } else {
     wrongAnswer();
   }
 }
+
+// Allow pressing Enter to submit
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("answer");
+
+    input.addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        checkAnswer();
+      }
+    });
+
+    input.focus(); // 👈 improves mobile experience
+  });
 </script>
 </head>
 <body>

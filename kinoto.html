@@ -9,12 +9,25 @@ function checkAnswer() {
   if (val === "nakime" || val === "nakime otokawa" || val === "otokawa") {
     document.getElementById("judgment").classList.add("show");
     setTimeout(() => {
-    window.location.href = "final.html";
+    window.location.href = "kinoe.html";
       }, 2000);
   } else {
     wrongAnswer();
   }
 }
+
+// Allow pressing Enter to submit
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("answer");
+
+    input.addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        checkAnswer();
+      }
+    });
+
+    input.focus(); // 👈 improves mobile experience
+  });
 </script>
 </head>
 <body>

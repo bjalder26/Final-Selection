@@ -6,20 +6,35 @@
 <script>
 function checkAnswer() {
   let val = document.getElementById("answer").value.toLowerCase().trim();
-  if (val === "flower") {
-    window.location.href = "page7.html";
+  if (val === "shinobu kocho" || val ==="shinobu") {
+    window.location.href = "kinoto.html";
   } else {
     wrongAnswer();
   }
 }
+
+// Allow pressing Enter to submit
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("answer");
+
+    input.addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        checkAnswer();
+      }
+    });
+
+    input.focus(); // 👈 improves mobile experience
+  });
 </script>
 </head>
 <body>
 <div class="container">
 <p>
-Cold preserves what time destroys.
+A gentle smile, a deadly sting,<br>
+Insects answer when I swing.<br>
+I lack the strength to cut clean through—<br>
+So poison is what I use on you.
 </p>
-
 <div class="input-group">
 <input id="answer">
 <button onclick="checkAnswer()">Enter</button>

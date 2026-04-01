@@ -7,12 +7,24 @@
 function checkAnswer() {
   let val = document.getElementById("answer").value.toLowerCase().trim();
   if (val === "thunder") {
-    window.location.href = "page4.html";
+    window.location.href = "kanoe.html";
   } else {
       wrongAnswer();
     }
 }
   
+  // Allow pressing Enter to submit
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("answer");
+
+    input.addEventListener("keypress", function(e) {
+      if (e.key === "Enter") {
+        checkAnswer();
+      }
+    });
+
+    input.focus(); // 👈 improves mobile experience
+  });
 </script>
 </head>
 <body>
