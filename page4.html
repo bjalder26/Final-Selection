@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script>
+function checkAnswer() {
+  let val = document.getElementById("answer").value.toLowerCase().trim();
+  if (val.includes("giyu")) {
+    document.getElementById("next").classList.add("show");
+  }
+}
+
+function checkFlower() {
+  let val = document.getElementById("flower").value.toLowerCase().trim();
+  if (val === "flower") {
+    window.location.href = "page5.html";
+  }
+}
+</script>
+</head>
+<body>
+<div class="container">
+<p>
+I wear two patterns, split down the seam,<br>
+My past was harsh, like a waking dream.<br>
+A calm exterior, but rage I keep—<br>
+Who am I when demons creep?
+</p>
+
+<input id="answer">
+<button onclick="checkAnswer()">Submit</button>
+
+<div id="next" class="fade">
+<p>
+Cold preserves what time destroys.
+</p>
+
+<input id="flower" placeholder="Next answer">
+<button onclick="checkFlower()">Enter</button>
+</div>
+</div>
+</body>
+</html>
