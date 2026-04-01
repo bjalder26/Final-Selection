@@ -6,7 +6,7 @@
 <script>
 function checkAnswer() {
   let val = document.getElementById("answer").value.toLowerCase().trim();
-  if (val.includes("giyu")) {
+  if (val === ("giyu")) {
     window.location.href = "page6.html";
   } else {
     wrongAnswer();
