@@ -7,7 +7,10 @@
 function checkAnswer() {
   let val = document.getElementById("answer").value.toLowerCase().trim();
   if (val === "nakime" || val === "nakime otokawa" || val === "otokawa") {
+    document.getElementById("judgment").classList.add("show");
+    setTimeout(() => {
     window.location.href = "final.html";
+      }, 2000);
   } else {
     wrongAnswer();
   }
@@ -26,6 +29,7 @@ I am where you watch the Hashira fight.
 <input id="answer">
 <button onclick="checkAnswer()">Enter</button>
 </div>
+  <p id="judgment" class="fade">Judgment Complete.</p>
 </div>
   <div id="overlay" class="overlay">
   <span id="overlayText">Incorrect.</span>
