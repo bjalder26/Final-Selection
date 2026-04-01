@@ -132,6 +132,12 @@ button:active {
     justify-content: center;
 }
 .inline {
-  display: inline-flex;
-  flex-direction: row;
+  display: flex;              /* better than inline-flex here */
+  justify-content: center;    /* center horizontally */
+  align-items: center;
+  gap: 10px;                  /* 👈 adds space between ALL items */
+}
+.inline span {
+  font-size: 1.4rem;
+  opacity: 0.7;
 }
