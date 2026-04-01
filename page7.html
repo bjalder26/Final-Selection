@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script>
+function checkAnswer() {
+  let val1 = document.getElementById("answer1").value.toLowerCase().trim();
+  let val2 = document.getElementById("answer2").value.toLowerCase().trim();
+  let val3 = document.getElementById("answer3").value.toLowerCase().trim();
+  if ((val1 === "muzan" || val1 === "muzan kibutsuji" || val1 === "kibutsuji") && val2 === "wisteria" && val3 === "blood") {
+    window.location.href = "page8.html";
+  } else {
+    wrongAnswer();
+  }
+}
+</script>
+</head>
+<body>
+<div class="container">
+<p>
+Even hunters must rest.<br><br>
+But demons do not.
+</p>
+<div class="input-group">
+<input id="answer1">
+<input id="answer2">
+<input id="answer3">
+<button onclick="checkAnswer()">Enter</button>
+</div>
+</div>
+  <div id="overlay" class="overlay">
+  <span id="overlayText">Incorrect.</span>
+</div>
+
+<audio id="failSound" src="sounds/biwa.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
