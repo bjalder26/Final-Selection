@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script>
+function checkAnswer() {
+  let val = document.getElementById("answer").value.toLowerCase().trim();
+  if (val === "thunder") {
+    document.getElementById("next").classList.add("show");
+  }
+}
+
+function checkCode() {
+  let val = document.getElementById("code").value.trim();
+  if (val === "585") {
+    window.location.href = "page4.html";
+  }
+}
+</script>
+</head>
+<body>
+<div class="container">
+<p>
+FIRE<br>
+WATER<br>
+THUNDER<br><br>
+
+One adapts. One strikes. One hesitates.<br><br>
+
+Make a restful choice.
+</p>
+
+<input id="answer">
+<button onclick="checkAnswer()">Submit</button>
+
+<div id="next" class="fade">
+<p>
+Not all strength is visible.<br><br>
+Look where knowledge is kept, but rarely used.<br><br>
+You will need three numbers.
+</p>
+
+<input id="code" placeholder="___">
+<button onclick="checkCode()">Enter</button>
+</div>
+</div>
+</body>
+</html>
