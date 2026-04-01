@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script>
+function checkAnswer() {
+  let val = document.getElementById("answer").value.toLowerCase().trim();
+  if (val.includes("giyu")) {
+    window.location.href = "page6.html";
+  }
+}  else {
+    wrongAnswer();
+  }
+}
+</script>
+</head>
+<body>
+<div class="container">
+<p>
+I wear two patterns, split down the seam,<br>
+My past was harsh, like a waking dream.<br>
+A calm exterior, but rage I keep—<br>
+Who am I when demons creep?
+</p>
+
+<input id="answer">
+<button onclick="checkAnswer()">Submit</button>
+</div>
+  <div id="overlay" class="overlay">
+  <span id="overlayText">Incorrect.</span>
+</div>
+
+<audio id="failSound" src="sounds/biwa.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
