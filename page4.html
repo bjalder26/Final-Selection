@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script>
+function checkAnswer() {
+  let val = document.getElementById("answer").value.toLowerCase().trim();
+  if (val === "585") {
+    window.location.href = "page5.html";
+  } else {
+      wrongAnswer();
+    }
+}
+  
+</script>
+</head>
+<body>
+<div class="container">
+<div>
+<p>
+Not all strength is visible.<br><br>
+Look where knowledge is kept, but rarely used.<br><br>
+You will need three numbers.
+</p>
+<div class="input-group">
+<input id="code" placeholder="___">
+<button onclick="checkAnswer()">Enter</button>
+</div>
+</div>
+</div>
+  <div id="overlay" class="overlay">
+  <span id="overlayText">Incorrect.</span>
+</div>
+
+<audio id="failSound" src="sounds/biwa.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
