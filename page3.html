@@ -6,21 +6,17 @@
 function checkAnswer() {
   let val = document.getElementById("answer").value.toLowerCase().trim();
   if (val === "thunder") {
-    document.getElementById("next").classList.add("show");
-  }
-}
-
-function checkCode() {
-  let val = document.getElementById("code").value.trim();
-  if (val === "585") {
     window.location.href = "page4.html";
-  }
+  } else {
+      wrongAnswer();
+    }
 }
+  
 </script>
 </head>
 <body>
-<div class="container">
-<p>
+<div class="container center">
+<p class="intro">
 FIRE<br>
 WATER<br>
 THUNDER<br><br>
@@ -29,11 +25,11 @@ One adapts. One strikes. One hesitates.<br><br>
 
 Make a restful choice.
 </p>
-
+<div class="input-group">
 <input id="answer">
 <button onclick="checkAnswer()">Submit</button>
-
-<div id="next" class="fade">
+<div>
+<div>
 <p>
 Not all strength is visible.<br><br>
 Look where knowledge is kept, but rarely used.<br><br>
