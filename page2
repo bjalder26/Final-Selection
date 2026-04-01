@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script>
+function checkAnswer() {
+  let val = document.getElementById("answer").value.toLowerCase().trim();
+  if (val === "nezuko") {
+    window.location.href = "page3.html";
+  }
+}
+</script>
+</head>
+<body>
+<div class="container">
+<p>
+She was human once.<br>
+She walks in sunlight, yet is not free.<br><br>
+Who is she?
+</p>
+
+<input id="answer">
+<button onclick="checkAnswer()">Submit</button>
+</div>
+</body>
+</html>
