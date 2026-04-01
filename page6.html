@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<script>
+function checkAnswer() {
+  let val = document.getElementById("answer").value.toLowerCase().trim();
+  if (val === "flower") {
+    window.location.href = "page6.html";
+  } else {
+    wrongAnswer();
+  }
+}
+</script>
+</head>
+<body>
+<div class="container">
+<p>
+Cold preserves what time destroys.
+</p>
+
+<div class="input-group">
+<input id="answer">
+<button onclick="checkAnswer()">Enter</button>
+</div>
+</div>
+  <div id="overlay" class="overlay">
+  <span id="overlayText">Incorrect.</span>
+</div>
+
+<audio id="failSound" src="sounds/biwa.mp3" preload="auto"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
