@@ -124,12 +124,13 @@ button:active {
 }
 
 .digit-input {
-    width: 2rem;
+    width: 2rem !important;
     height: 2rem;
     min-width: 2rem;
     text-align: center;
     font-size: 1.2rem;
     justify-content: center;
+    margin-top: 0px;
 }
 .inline {
   display: flex;              /* better than inline-flex here */
