@@ -7,7 +7,9 @@ function checkAnswer() {
   let val = document.getElementById("answer").value.toLowerCase().trim();
   if (val === "nezuko" || val == "nezuko kamado") {
     window.location.href = "page3.html";
-  }
+  } else {
+  wrongAnswer();
+}
 }
 </script>
 </head>
