@@ -6,6 +6,9 @@ function wrongAnswer() {
   overlay.classList.add("show");
   text.style.opacity = 0;
 
+  if (navigator.vibrate) {
+  navigator.vibrate(100);
+}
   // Restart sound cleanly
   sound.pause();
   sound.currentTime = 0;
