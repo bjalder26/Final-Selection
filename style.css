@@ -129,6 +129,7 @@ button:active {
     min-width: 2rem;
     text-align: center;
     font-size: 1.2rem;
+    justify-content: center;
 }
 .inline {
   display: inline-flex;
