@@ -15,18 +15,6 @@ function checkAnswer() {
   }
 }
 
-// Allow pressing Enter to submit
-  document.addEventListener("DOMContentLoaded", () => {
-    const input = document.getElementById("answer");
-
-    input.addEventListener("keypress", function(e) {
-      if (e.key === "Enter") {
-        checkAnswer();
-      }
-    });
-
-    input.focus(); // 👈 improves mobile experience
-  });
 </script>
 </head>
 <body>

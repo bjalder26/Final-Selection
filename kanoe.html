@@ -19,19 +19,6 @@ function restrict(el) {
     // Replace any character that is NOT 0-9 with an empty string
     el.value = el.value.replace(/[^0-9]/g, '');
 }
-
-// Allow pressing Enter to submit
-  document.addEventListener("DOMContentLoaded", () => {
-    const input = document.getElementById("answer");
-
-    input.addEventListener("keypress", function(e) {
-      if (e.key === "Enter") {
-        checkAnswer();
-      }
-    });
-
-    input.focus(); // 👈 improves mobile experience
-  });
   
 </script>
 </head>
