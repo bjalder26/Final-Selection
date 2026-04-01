@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
 <script>
 function checkAnswer() {
-  let val = document.getElementById("answer").value.toLowerCase().trim();
+  let val1 = document.getElementById("num1").value.toLowerCase().trim();
+  let val2 = document.getElementById("num2").value.toLowerCase().trim();
+  let val3 = document.getElementById("num3").value.toLowerCase().trim();
+  let val = val1.concat(val2).concat(val3);
   if (val === "585") {
     window.location.href = "page5.html";
   } else {
@@ -19,11 +23,12 @@ function checkAnswer() {
 <div>
 <p>
 Not all strength is visible.<br><br>
-Look where knowledge is kept, but rarely used.<br><br>
-You will need three numbers.
+Look where knowledge is kept, but rarely used.<br>
 </p>
 <div class="input-group">
-<input id="code" placeholder="___">
+<input type="number" id="num1" placeholder="First Number"> -
+<input type="number" id="num2" placeholder="Second Number"> -
+<input type="number" id="num3" placeholder="Third Number">
 <button onclick="checkAnswer()">Enter</button>
 </div>
 </div>
