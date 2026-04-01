@@ -56,3 +56,31 @@ button {
 .show {
   opacity: 1;
 }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.88);
+  color: #e6edf3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+}
+
+.overlay.show {
+  opacity: 1;
+}
+
+#overlayText {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
