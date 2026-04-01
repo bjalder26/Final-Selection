@@ -18,25 +18,37 @@
 
   // Allow pressing Enter to submit
   document.addEventListener("DOMContentLoaded", () => {
-    document.getElementById("answer").addEventListener("keypress", function(e) {
+    const input = document.getElementById("answer");
+
+    input.addEventListener("keypress", function(e) {
       if (e.key === "Enter") {
         checkAnswer();
       }
     });
+
+    input.focus(); // 👈 improves mobile experience
   });
   </script>
 </head>
 
 <body>
   <div class="container">
+    
     <p class="riddle">
       She was human once.<br>
       She walks in sunlight, yet is not free.<br><br>
       Who is she?
     </p>
 
-    <input id="answer" placeholder="Enter answer..." autocomplete="off">
+    <input 
+      id="answer" 
+      placeholder="Enter answer..." 
+      autocomplete="off"
+      inputmode="text"
+    >
+
     <button onclick="checkAnswer()">Submit</button>
+
   </div>
 
   <div id="overlay" class="overlay">
