@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script>
+function checkAnswer() {
+  let val = document.getElementById("answer").value.toLowerCase().trim();
+  if (val.includes("shinobu")) {
+    document.getElementById("next").classList.add("show");
+  }
+}
+</script>
+</head>
+<body>
+<div class="container">
+<p>
+A gentle smile, a deadly sting,<br>
+Insects answer when I swing.<br>
+I lack the strength to cut clean through—<br>
+So poison is what I use on you.
+</p>
+
+<input id="answer">
+<button onclick="checkAnswer()">Submit</button>
+
+<div id="next" class="fade">
+<p>
+I have arms but cannot hold a sword,<br>
+and legs but cannot walk.<br><br>
+
+I am where you watch the Hashira fight.
+</p>
+</div>
+</div>
+</body>
+</html>
