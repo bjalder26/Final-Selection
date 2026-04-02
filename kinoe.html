@@ -2,33 +2,78 @@
 <html>
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="style.css">
-  <script>
-const sound = new Audio('sounds/Hashira_Meeting_Theme.mp3');
+  <link rel="stylesheet" href="style.css">
 
-// Listen for a click or touch and play immediately
-window.addEventListener('click', () => {
-    sound.play().catch(error => {
-        console.error("Playback failed:", error);
-    });
-}, { once: true }); // This ensures it only triggers on the first interaction
+  <style>
+    .hidden {
+      opacity: 0;
+    }
+
+    .line {
+      opacity: 0;
+      transition: opacity 1s ease;
+      margin: 10px 0;
+    }
+
+    .line.show {
+      opacity: 1;
+    }
+
+    .center-btn {
+      text-align: center;
+    }
+
+    #startBtn {
+      padding: 14px 20px;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      border: none;
+      background: #8b0000;
+      color: white;
+    }
+  </style>
+
+  <script>
+    const sound = new Audio('sounds/Hashira_Meeting_Theme.mp3');
+
+    function startSequence() {
+      sound.play().catch(() => {});
+
+      document.getElementById("startBtn").style.display = "none";
+
+      const lines = document.querySelectorAll(".line");
+
+      lines.forEach((line, index) => {
+        setTimeout(() => {
+          line.classList.add("show");
+        }, (index * 2100) + 500); // 2 seconds between lines
+      });
+    }
   </script>
 </head>
+
 <body>
-<div class="container">
-<p>
-The doors shift.
-The space bends.
+  <div class="container">
 
-You found the one who controls it all.
+    <div class="center-btn">
+      <button id="startBtn" onclick="startSequence()">Open Results</button>
+    </div>
 
-Few make it this far.
+    <div id="results">
 
-You did.
+      <p class="line">The doors shift.</p>
+      <p class="line">The space bends.</p>
 
-Welcome to the Demon Slayer Corps.
-</p>
-</div>
-</div>
+      <p class="line">You found the one who controls it all.</p>
+
+      <p class="line">Few make it this far.</p>
+
+      <p class="line">You did.</p>
+
+      <p class="line">Welcome to the Demon Slayer Corps.</p>
+
+    </div>
+
+  </div>
 </body>
 </html>
