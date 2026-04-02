@@ -9,7 +9,7 @@ function checkAnswer() {
   let val2 = document.getElementById("num2").value.toLowerCase().trim();
   let val3 = document.getElementById("num3").value.toLowerCase().trim();
   let val = val1.concat(val2).concat(val3);
-  if (val === "585") {
+  if (val === "575") {
     window.location.href = "tsuchinoto.html";
   } else {
       wrongAnswer();
@@ -19,7 +19,7 @@ function restrict(el) {
     // Replace any character that is NOT 0-9 with an empty string
     el.value = el.value.replace(/[^0-9]/g, '');
 }
-  
+
 </script>
 </head>
 <body>
