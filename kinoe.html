@@ -4,13 +4,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
   <script>
-// 1. Create the audio object
 const sound = new Audio('sounds/Hashira_Meeting_Theme.mp3');
 
-// 2. Set the delay (e.g., 5000ms = 5 seconds)
-setTimeout(() => {
-    sound.play();
-}, 3000);
+// Listen for a click or touch and play immediately
+window.addEventListener('click', () => {
+    sound.play().catch(error => {
+        console.error("Playback failed:", error);
+    });
+}, { once: true }); // This ensures it only triggers on the first interaction
   </script>
 </head>
 <body>
